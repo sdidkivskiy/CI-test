@@ -49,11 +49,6 @@ jobs:
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
     steps:
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
