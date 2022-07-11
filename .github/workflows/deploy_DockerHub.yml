@@ -13,7 +13,7 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
@@ -48,6 +48,7 @@ jobs:
         run: echo ${{ steps.docker_build.outputs.digest }}
 
   deploy_to_VPS:
+    runs-on: ubuntu-latest
     steps:
         uses: appleboy/ssh-action@master
         with:
