@@ -44,7 +44,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/nodejs-demo:${{ steps.vars.outputs.tag }} , ${{ secrets.DOCKER_USERNAME }}/nodejs-demo:latest
+          tags: maz2500z/nodejs-demo
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
