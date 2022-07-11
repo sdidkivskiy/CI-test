@@ -34,6 +34,8 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Set up Docker Buildx
+        id: Buildx
+        uses: docker/setup-buildx-action@v1
 
       - name: Build and Push
         id: docker_build
@@ -42,7 +44,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/nodejs:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/nodejs-demo:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
