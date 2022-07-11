@@ -50,7 +50,7 @@ jobs:
         - name: Image digest
           run: echo ${{ steps.docker_build.outputs.digest }}
   job2:
-    needs: job1
+
     steps:
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
