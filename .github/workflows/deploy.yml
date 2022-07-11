@@ -46,5 +46,6 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }} nodejs-demo:latest
 
+
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
