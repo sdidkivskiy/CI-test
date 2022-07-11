@@ -48,7 +48,6 @@ jobs:
         run: echo ${{ steps.docker_build.outputs.digest }}
 
   deploy_to_VPS:
-    
     needs: build
     runs-on: ubuntu-latest
     steps:
