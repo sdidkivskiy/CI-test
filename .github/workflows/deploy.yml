@@ -44,7 +44,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/elkapplication:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/app:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
